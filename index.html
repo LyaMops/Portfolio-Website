@@ -9,27 +9,163 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f87903964d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <img src="images/hero.png"  class="hero-photo">
-    <header>
+    <!-- Header and Introduction -->
+    <header id="header">
         <div class="container">
-            <nav class="flex centered-vertically">
-                <img class="logo" src="images/logo.png">
+            <nav>
+                <h1><span>O</span>leksandr<span>.</span></h1>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contacts</a></li>
+                    <i class="fa-solid fa-xmark"></i>
                 </ul>
+                <i class="fa-solid fa-bars"></i>
             </nav>
+            <div class="header-text">
+                <p>Front-End Engineer</p>
+                <h1>Hi, I'm <span>Oleksandr</span><br>Nesterenko from Ukraine</h1>
+            </div>
         </div>
+        <div class="hero-background"></div>
+        <div class="hero-photo"></div>
     </header>
-    <section class="introduction blah blah blah">
-        <h2>Front-End Engineer</h2>
-        <h1>Hi, I'm Oleksandr<br>Nesterenko from Ukraine</h1>
-    </section>
-    
+    <!-- About Me -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="./images/Vitalik.png" ></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lectus vel erat rhoncus suscipit. Cras hendrerit sodales iaculis. Mauris nec lectus in magna finibus hendrerit. Nam placerat quam massa. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" data-target="skills">Skills</p>
+                        <p class="tab-links" data-target="experience">Experience</p>
+                        <p class="tab-links" data-target="education">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML & CSS</span><br>Створення адаптивних веб-інтерфейсів</li>
+                            <li><span>JavaScript</span><br>Динамічний контент та взаємодія</li>
+                            <li><span>React.js</span><br>Розробка компонентів та SPA</li>
+                            <li><span>Three.js</span><br>3D-графіка у браузері</li>
+                            <li><span>UI/UX</span><br>Базові навички дизайну</li>
+                            <li><span>Version Control</span><br>Робота з Git/GitHub</li>
+                        </ul>
+                    </div>   
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Landing Page "Добре Серце"</span><br>Розробка односторінкового сайту</li>
+                            <li><span>Front-End Projects</span><br>Практичні проекти на HTML, CSS, JS, React</li>
+                            <li><span>Self-Learning & Pet Projects</span><br>Дослідження Three.js, GLSL, Node.js</li>
+                        </ul>
+                    </div>    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Хімічна інженерія</span><br>Освіта у сфері інженерної хімії - Łódź University of Technology<br>Faculty of Chemistry - Nanotechnology</li>
+                            <li><span>Front-End Development</span><br>Самостійне навчання (HTML, CSS, JS, React, Three.js)</li>
+                            <li><span>Online Courses</span><br>Code Academy Front-End carrier path</li>
+                        </ul>
+                    </div>
+                                 
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- My Services -->
+    <div id="services">
+        <div class="container">
+            <div class="sub-title">My Services</div>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ipsum sed leo tempus, in lacinia turpis porta. Curabitur vel. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ipsum sed leo tempus, in lacinia turpis porta. Curabitur vel. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>React & Three.js Apps</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales ipsum sed leo tempus, in lacinia turpis porta. Curabitur vel. </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- My Work -->
+    <div id="portfolio">
+        <div class="container">
+            <div class="sub-title">My Work</div>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Kind Heart SPA</h3>
+                        <p>Developed a responsive donation page with category selection, secure payments, and real-time fundraising updates using HTML, CSS and JS</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Kind Heart SPA</h3>
+                        <p>Developed a responsive donation page with category selection, secure payments, and real-time fundraising updates using HTML, CSS and JS</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-1.jpg">
+                    <div class="layer">
+                        <h3>Kind Heart SPA</h3>
+                        <p>Developed a responsive donation page with category selection, secure payments, and real-time fundraising updates using HTML, CSS and JS</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-share-from-square"></i> nesterenkooleksandr2005@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> +48696878963</p>
+                    <div class="social-icons">
+                        <a href="facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://x.com"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="./images/Vitalik.png" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button class="btn btn2" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Oleksandr. Glory to Ukraine! <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
