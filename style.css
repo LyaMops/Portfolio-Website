@@ -23,6 +23,10 @@ body {
   color: #fff;
 }
 
+#about, #services, #portfolio #contact {
+  background: #080808
+}
+
 /* Header */
 
 img.hero-photo {
@@ -49,7 +53,11 @@ header {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  position: relative;
+  /*position: sticky;
+  top: 0;
+  z-index: -100;
+  Тут фрагмент коду який відповідає за sticky, хуй знає, виглядає наче прикольно але хз
+  */
 }
 
 nav {
@@ -369,7 +377,7 @@ nav ul li a:hover::after {
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
-  margin-right: 15px;
+  margin: 0 8px;
   color: #ababab;
   display: inline-block;
   transition: all 0.5s;
@@ -581,6 +589,13 @@ nav .fa-solid {
     height: 45px;
     border-radius: 50%;
     text-align: center;
+  }
+
+  .contact-left p {
+    min-width: 0;
+  }
+  .contact-left p i {
+    display: none;
   }
 }
 
