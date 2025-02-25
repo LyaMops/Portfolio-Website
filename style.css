@@ -14,16 +14,8 @@
   padding: 10px max(10px, 10%);
 }
 
-.flex {
-  display: flex;
-}
 html {
   scroll-behavior: smooth;
-}
-
-html,
-body {
-  overflow-x: hidden;
 }
 
 body {
@@ -33,16 +25,13 @@ body {
 
 /* Header */
 
-.hero-photo {
-  width: 50rem;
-  height: 52.5rem;
+img.hero-photo {
   position: absolute;
-  top: 10rem;
-  left: 50%;
-  background: linear-gradient(to left, hsla(0, 0%, 3.1%, 35%) 25%, transparent),
-    url("./images/hero-photo.png") no-repeat right/cover;
+  width: auto;
+  height: 80%;
+  bottom: 0;
   z-index: -1;
-  overflow: hidden;
+  right: 10%;
 }
 
 .hero-background {
@@ -53,7 +42,7 @@ body {
   left: 0;
   background: linear-gradient(to left, #080808, transparent 50%),
     url("./images/background.png") no-repeat center/cover;
-  z-index: -2;
+  z-index: -1;
 }
 
 header {
@@ -123,7 +112,7 @@ nav ul li a:hover::after {
 #about {
   padding: 80px 0;
   color: #ababab;
-  height: 850px;
+  min-height: 650px;
 }
 
 .row {
@@ -153,7 +142,7 @@ nav ul li a:hover::after {
 }
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 20px 0;
 }
 
 .tab-links {
@@ -191,7 +180,6 @@ nav ul li a:hover::after {
 
 .tab-contents {
   position: absolute;
-  width: 100%;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s ease, visibility 0s 0.5s;
@@ -210,7 +198,7 @@ nav ul li a:hover::after {
 
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
@@ -275,7 +263,7 @@ nav ul li a:hover::after {
 
 .work-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
@@ -365,6 +353,7 @@ nav ul li a:hover::after {
 
 .contact-left p {
   margin-top: 30px;
+  min-width: 350px;
 }
 
 .contact-left p i {
@@ -437,14 +426,63 @@ form .btn2 {
 nav .fa-solid {
   display: none;
 }
-
-@media only screen and (max-width: 600px) {
-  div.hero-photo {
-    background: none;
+@media only screen and (min-width: 768px) and (max-width: 1076px) {
+  nav ul li {
+    margin: 10px 10px;
   }
-  .header-text {
-    margin-top: 100%;
+
+  nav h1 {
+    font-size: 45px;
+  }
+
+  nav ul li a {
     font-size: 16px;
+  }
+
+  .header-text {
+    font-size: 24px;
+  }
+
+  .header-text h1 {
+    font-size: 36px;
+  }
+
+  .about-col-1 {
+    display: none;
+  }
+
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  #contact .row {
+    flex-direction: column;
+  }
+
+  .contact-left, .contact-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sub-title {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav h1 {
+    font-size: 45px;
+  }
+
+  .hero-photo {
+    z-index: -1;
+    left: 0;
+    margin: 0 auto;
+  }
+  
+  .header-text {
+    margin-top: 55vh;
+    font-size: 16px;
+    text-align: center;
   }
 
   .header-text h1 {
@@ -461,8 +499,8 @@ nav .fa-solid {
     background: #ff004f;
     position: fixed;
     top: 0;
-    right: -200px;
-    width: 200px;
+    right: 0;
+    width: 0;
     height: 100vh;
     padding-top: 50px;
     opacity: 0;
@@ -483,11 +521,77 @@ nav .fa-solid {
 
   nav .fa-bars {
     cursor: pointer;
+    position: fixed;
+    right: 40px;
+    top: 30px;
+    z-index: 100;
   }
 
   nav ul.nav-active {
     visibility: visible;
     opacity: 1;
     right: 0;
+    width: 200px;
+  }
+
+  .about-col-1 {
+    display: none;
+  }
+
+  .about-col-2 {
+    width: 100%;
+  }
+
+  #contact .row {
+    flex-direction: column;
+  }
+
+  .contact-left, .contact-right, .services-list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sub-title {
+    font-size: 45px;
+  }
+  #services .sub-title, #portfolio .sub-title {
+    text-align: center;
+  }
+
+  .layer p {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .layer h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .layer a {
+    margin-top: 10px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 45px;
+    background: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
   }
 }
+
+/*
+Фотку віталіка - йобнуть
+Шрифт About me заголовку font size 48px і відцентрований
+Скіли може відцентрувати хуй зна
+контакти відцентрувати
+
+Зробити підгрузку елементів через бекенд(чи апішку) бази джєйсона стєтхєма
+
+брейк-пойнт 1 - 1176px
+
+*/

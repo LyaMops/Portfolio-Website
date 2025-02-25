@@ -25,11 +25,14 @@ const navList = document.querySelector('nav');
 
 function openSideMenu() {
     navList.querySelector('ul').classList.add('nav-active');
+    navList.querySelector('.fa-bars').style.visibility = 'hidden';
 }
 
 function closeSideMenu() {
     navList.querySelector('ul').classList.remove('nav-active');
+    navList.querySelector('.fa-bars').style.visibility = 'visible';
 }
 
 openSideMenuBtn.addEventListener('click', openSideMenu);
 closeSideMenuBtn.addEventListener('click', closeSideMenu); 
+
